@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #ffb900;
+    --font-heading: Sen, sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+/* common- thanh phan dung chung */
+a {
+    text-decoration: none;
+}
+.main-content {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(
+        100% - 28px
+    ); /* xu ly khi thu gon man hinh se ko bi che khuat */
+}
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    padding: 0 16px;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    background: #171100;
+    border-radius: 999px;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+.heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+/* Header */
+.header {
+    background-color: #fffcf4;
+}
+.header.fixed {
+    position: sticky;
+    top: -28px;
+    z-index: 1;
+}
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px;
+}
+.header .nav ul {
+    display: flex;
+}
+.header .nav {
+    margin-left: auto;
+}
+.header .nav a {
+    position: relative;
+    padding: 8px 21px;
+    font-size: 1.6rem;
+    color: #5f5b53;
+}
+.nav a:hover,
+.nav li.active a {
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor; /*xu ly khi hover vao se ko bi giat cac noi dung xung quanh neu de font-weight: 600 */
+    color: #171100;
+}
+.nav li.active a::after {
+    position: absolute;
+    left: 21px;
+    bottom: 6px;
+    content: "";
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: #171100;
+    border-radius: 1px;
+}
+.header .sign-up-btn {
+    min-width: 144px;
+}
+.header .action {
+    margin-left: 49px;
+}
+/* Hero */
+.hero {
+    padding: 56px 0 65px;
+    background: #fffcf4;
+}
+.hero .body {
+    display: flex;
+}
+/* hero media-block */
+.hero .media-block {
+    width: 48%;
+    position: relative;
+}
+.hero .media-block .img {
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+    vertical-align: bottom; /*can hinh anh theo duong o duoi khi ko muon du 1 khoang nho hoac su dung display:block*/
+}
+.hero-summary {
+    position: absolute;
+    width: 270px;
+    right: 0;
+    bottom: 48px;
+    padding: 24px;
+    background: #ffffff;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+.hero-summary .item {
+    display: flex;
+    align-items: center;
+}
+.hero-summary .item + .item {
+    margin-top: 22px;
+}
+.hero-summary .icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff9e8;
+    border-radius: 50%;
+}
+.hero-summary .item:nth-of-type(2) .icon {
+    background: #fcefff;
+}
+.hero-summary .item:nth-of-type(3) .icon {
+    background: #ebeaff;
+}
+.hero .info {
+    margin-left: 16px;
+}
+.hero .label {
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+.hero .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+/* hero content-block */
+.hero .content-block {
+    width: 52%;
+    padding: 64px 0 0 130px;
+}
+
+.hero .desc {
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+.hero .cta-group {
+    display: flex;
+    align-items: center;
+    margin: 38px 0 48px;
+}
+.hero-cta {
+    min-width: 180px;
+    line-height: 64px;
+    background-color: var(--primary-color);
+}
+.hero .watch-video {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    border: none;
+    background-color: #fffcf4;
+    cursor: pointer;
+}
+.hero .watch-video .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+}
+.hero .watch-video span {
+    margin-left: 14px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+.hero .stats {
+    margin: 8px 0 0 -28px;
+}
+.hero .stats strong {
+    padding: 0 8px 0 28px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 1.23;
+    color: #171100;
+}
+/* Popular */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+.popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popular-top .desc {
+    margin-top: 16px;
+    width: 458px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.36;
+    color: #5f5b53;
+}
+.popular .controls {
+    display: flex;
+    gap: 18px;
+}
+.popular-top .control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+}
+.popular-top .control-btn:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
