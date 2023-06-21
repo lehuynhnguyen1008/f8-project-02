@@ -359,8 +359,8 @@ a {
 }
 .feedback-item {
     display: flex;
-    flex-shrink: 0;/* cho các thuộc tính con ép lại*/
-    width: 100%; 
+    flex-shrink: 0; /* cho các thuộc tính con ép lại*/
+    width: 100%;
 }
 .feedback-item .avatar {
     width: 72px;
@@ -409,4 +409,63 @@ a {
     font-size: 2.6rem;
     line-height: 1.54;
     color: #ffffff;
+}
+
+/*Features 1*/
+.features {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+.features .body {
+    display: flex;
+    justify-content: space-between;
+}
+.features .images {
+    display: flex;
+    gap: 0 30px;
+}
+.features .images img {
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.features img.lower {
+    margin-top: 34px;
+}
+.features .content {
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* các thuộc tính trên trừ cái with:41% thì dùng để căn nội dung theo chìu đọc để khi nội dung 
+    văn bản có thêm thì các phần tử sẽ ko bị thay đổi trục */
+}
+.features .desc {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #5f5b53;
+}
+.features .cta-btn {
+    margin-top: 32px;
+    min-width: 137px;
+    color: #ffffff;
+    background: var(--primary-color);
+}
+/*Features 2 */
+.features-2nd {
+    margin-top: 70px;
+}
+.features-2nd .body {
+    flex-direction: row-reverse;
+}
+.features-2nd .content {
+    width: 49%;
+}
+.features-2nd .images img {
+    width: 470px;
+    height: 440px;
 }
