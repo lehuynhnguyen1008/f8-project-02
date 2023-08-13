@@ -97,33 +97,49 @@
         />
         <!-- style css -->
         <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <!-- Header -->
         <header class="header fixed">
             <div class="main-content">
                 <div class="body">
+                    <!-- Tab menu-mobile -->
+                    <label for="menu-checkbox">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                            class="menu-mobile"
+                        >
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            /></svg
+                    ></label>
+
                     <!-- Logo -->
-                    <img
-                        src="./assets/img/Lesson..svg"
-                        alt="Lesson."
-                        class="logo"
-                    />
+                    <a href="#">
+                        <img
+                            src="./assets/img/Lesson..svg"
+                            alt="Lesson."
+                            class="logo"
+                        />
+                    </a>
 
                     <!-- Nav -->
-                    <nav class="nav">
+                    <nav class="nav nav-mobile">
                         <ul>
                             <li class="active">
-                                <a href="#!">Home</a>
+                                <a href="#home">Home</a>
                             </li>
                             <li>
-                                <a href="#!">Courses</a>
+                                <a href="#coures">Courses</a>
                             </li>
                             <li>
-                                <a href="#!">Pricing</a>
+                                <a href="#pricing">Pricing</a>
                             </li>
                             <li>
-                                <a href="#!">Reviews</a>
+                                <a href="#reviews">Reviews</a>
                             </li>
                         </ul>
                     </nav>
@@ -133,10 +149,59 @@
                     </div>
                 </div>
             </div>
+            <!-- Mobile header -->
+            <header class="mobile-header">
+                <input
+                    type="checkbox"
+                    name="menu-checkbox"
+                    id="menu-checkbox"
+                    class="menu-checkbox"
+                    hidden
+                />
+                <label for="menu-checkbox" class="menu-overlay"></label>
+                <div class="menu-drawer">
+                    <a href="#">
+                        <img
+                            src="./assets/img/Lesson..svg"
+                            alt="Lesson."
+                            class="logo-mobile"
+                        />
+                    </a>
+                    <label for="menu-checkbox">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 384 512"
+                            class="close-icon"
+                        >
+                            <path
+                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                            />
+                        </svg>
+                    </label>
+                    <nav class="nav-mobile">
+                        <ul>
+                            <li class="active">
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#coures">Courses</a>
+                            </li>
+                            <li>
+                                <a href="#pricing">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#reviews">Reviews</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
         </header>
+
         <main>
             <!-- Hero -->
-            <div class="hero">
+            <div class="hero" id="home">
                 <div class="main-content">
                     <div class="body">
                         <!-- Hero left -->
@@ -220,7 +285,7 @@
             </div>
 
             <!-- Popular -->
-            <div class="popular">
+            <div class="popular" id="coures">
                 <div class="main-content">
                     <div class="popular-top">
                         <div class="info">
@@ -393,7 +458,7 @@
 
             <!-- Feedback -->
 
-            <div class="feedback">
+            <div class="feedback" id="pricing">
                 <div class="main-content">
                     <div class="feedback-list">
                         <!-- feedback item 1 -->
@@ -556,7 +621,7 @@
             </div>
 
             <!-- Blog -->
-            <div class="blog">
+            <div class="blog" id="reviews">
                 <div class="main-content">
                     <div class="blog-top">
                         <h2 class="heading lv2">Our blog</h2>
